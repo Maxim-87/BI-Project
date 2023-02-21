@@ -1,38 +1,46 @@
 <div id="container">
-<div id="pie">
-<canvas baseChart
-  [datasets]="pieData"
-  [options]="pieoptions"
-  [type]="'pie'"
-  [labels]="datalabels"
->
-</canvas>
-</div>
-
-<div id="bar">
-  <canvas baseChart
-    [datasets]="pieData"
-    [options]="pieoptions"
-    [type]="'bar'"
-    [labels]="datalabels"
-  >
-  </canvas>
-  <div>
-    <p>Select Year:</p>
-    <input type="radio" id="2014" name="year" value="2014" (change)="changeData(2014)">
-    <label for="2014">2014</label><br>
-
-    <input type="radio" id="2015" name="year" value="2015" (change)="changeData(2015)">
-    <label for="2015">2015</label><br>
-
-    <input type="radio" id="2016" name="year" value="2016" (change)="changeData(2016)">
-    <label for="2016">2016</label><br><br>
-  </div>
+  <div id="pie">
+    <canvas baseChart
+            [datasets]="pieData"
+            [options]="pieoptions"
+            [type]="'pie'"
+            [labels]="datalabels">
+    </canvas>
   </div>
 
+  <div id="bar">
+    <canvas baseChart
+            [datasets]="pieData"
+            [options]="pieoptions"
+            [type]="'bar'"
+            [labels]="datalabels">
+    </canvas>
+    <div>
+      <p>Select Year:</p>
+      <input aria-label="2014 year"
+             tabindex="0"
+             type="radio"
+             id="2014"
+             name="year"
+             value="2014" (change)="changeData(2014)">
+      <label for="2014">2014</label><br>
 
+      <input aria-label="2015 year"
+             tabindex="0"
+             type="radio" id="2015"
+             name="year"
+             value="2015"
+             (change)="changeData(2015)">
+      <label for="2015">2015</label><br>
 
+      <input aria-label="2016 year"
+             tabindex="0"
+             type="radio"
+             id="2016"
+             name="year"
+             value="2016"
+             (change)="changeData(2016)">
+      <label for="2016">2016</label><br><br>
+    </div>
+  </div>
 </div>
-
-
-
